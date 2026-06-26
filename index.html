@@ -362,64 +362,6 @@ a[aria-disabled="true"] {
 .hero-feat:last-child { border-right: none; margin-right: 0; padding-right: 0; }
 
 /* =============================================
-   FEAR SECTION
-   ============================================= */
-.fear-section {
-  background: var(--surface);
-  padding: 160px 0;
-  border-top: 1px solid var(--border);
-}
-.fear-inner {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 0 64px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 96px;
-  align-items: start;
-}
-.fear-main { }
-.fear-quote {
-  font-family: var(--serif);
-  font-size: clamp(26px, 3.6vw, 44px);
-  font-weight: 300;
-  font-style: italic;
-  color: var(--text);
-  line-height: 1.44;
-}
-.fear-rule {
-  width: 28px; height: 1px;
-  background: var(--accent);
-  opacity: 0.6;
-  margin: 40px 0;
-}
-.fear-sub {
-  font-size: 15px;
-  color: var(--muted);
-  font-weight: 300;
-  line-height: 1.9;
-}
-.fear-aside { }
-.fear-tagline {
-  font-family: var(--serif);
-  font-size: clamp(18px, 2.2vw, 26px);
-  font-weight: 300;
-  color: var(--text);
-  line-height: 1.55;
-  padding-left: 28px;
-  border-left: 1px solid var(--accent);
-  margin-bottom: 32px;
-  opacity: 0.85;
-}
-.fear-tagline em { font-style: italic; }
-.fear-detail {
-  font-size: 14px;
-  color: var(--muted);
-  font-weight: 300;
-  line-height: 1.9;
-}
-
-/* =============================================
    WHY STATS
    ============================================= */
 .why-stats {
@@ -1399,14 +1341,14 @@ a[aria-disabled="true"] {
    ============================================= */
 @media (max-width: 1024px) {
   .wrap, .nav-inner, .footer-inner,
-  .fear-inner, .ahiw-header, .ahiw-body,
+  .ahiw-header, .ahiw-body,
   .hero-inner { padding-left: 40px; padding-right: 40px; }
   .ahiw-media { margin-right: 48px; }
 }
 
 @media (max-width: 960px) {
   .wrap, .nav-inner, .footer-inner,
-  .fear-inner, .ahiw-header { padding-left: 28px; padding-right: 28px; }
+  .ahiw-header { padding-left: 28px; padding-right: 28px; }
 
   /* Nav */
   .nav-links { display: none; }
@@ -1430,7 +1372,6 @@ a[aria-disabled="true"] {
   .hero-feat:last-child { border-bottom: none; }
 
   /* Sections */
-  .fear-inner,
   .evidence-inner,
   .custom-grid { grid-template-columns: 1fr; gap: 56px; }
   .india-block { grid-template-columns: 1fr; gap: 14px; }
@@ -1492,7 +1433,7 @@ a[aria-disabled="true"] {
 }
 
 @media (max-width: 600px) {
-  .fear-section, .why-stats, .evidence, .recall,
+  .why-stats, .evidence, .recall,
   .usecases, .custom-section, .process, .quote-section { padding: 96px 0; }
   .uc-item { padding: 40px 0 !important; }
   .panel { padding: 28px 24px; }
@@ -1547,23 +1488,6 @@ a[aria-disabled="true"] {
         <div class="hero-feat">Sealed &amp; Untouched</div>
         <div class="hero-feat">Ships in 48 Hours</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- =============================================
-     FEAR — THE INVISIBLE DETAIL
-     ============================================= -->
-<section class="fear-section" aria-label="Why this matters">
-  <div class="fear-inner">
-    <div class="fear-main reveal">
-      <p class="fear-quote">"They won't blame the commute. They'll blame you."</p>
-      <div class="fear-rule"></div>
-      <p class="fear-sub">Phone. ATM. Car door. All on your table now.</p>
-    </div>
-    <div class="fear-aside reveal">
-      <p class="fear-tagline">One wipe. Between your kitchen and <em>their next review.</em></p>
-      <p class="fear-detail">You can't control what they touched before walking in. You can control what happens when they sit down.</p>
     </div>
   </div>
 </section>
