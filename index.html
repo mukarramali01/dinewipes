@@ -1915,7 +1915,7 @@ a[aria-disabled="true"] {
         <div class="panel-cta">
           <a class="btn-accent" id="quote-cta" href="#" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.4 31.6l7.9-2.1c2.3 1.3 5 2 7.7 2 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.4c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.8 21 3.2 18.5 3.2 16 3.2 9 9 3.2 16 3.2S28.8 9 28.8 16 23 28.8 16 28.8zm7.6-9.1c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.5-.2.3-.5.3-.9.1-1.3-.6-2.5-1.4-3.5-2.5-.8-.8-1.5-1.8-2.1-2.7-.2-.3 0-.6.1-.8.3-.3.6-.7.9-1 .2-.3.3-.5.1-.9-.1-.3-1-2.4-1.3-3.1-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.3 2.1 3.3 5.2 4.6 2.6 1.1 3.1.9 3.7.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
-            Order Your Custom Wipe
+            <span id="quote-cta-text">Order on WhatsApp</span>
           </a>
         </div>
       </div>
@@ -1991,6 +1991,7 @@ a[aria-disabled="true"] {
       step: 500,
       default: 5000,
       note: '',
+      cta: 'Order on WhatsApp',
       message: function (qty) {
         return 'Hi DineWipes, I\'d like to order DineWipes-branded wipes.\n\nQuantity: ' + qty + ' units\n\nPlease share pricing and next steps.';
       }
@@ -2002,6 +2003,7 @@ a[aria-disabled="true"] {
       step: 1000,
       default: 10000,
       note: 'Custom Branding starts at 10,000 units. Between 5,000–9,999? {switch} instead.',
+      cta: 'Order Your Custom Wipe',
       message: function (qty) {
         return 'Hi DineWipes, I\'m interested in custom-branded wipes with our own branding.\n\nQuantity: ' + qty + ' units\n\nPlease share pricing, the design process and next steps.';
       }
@@ -2044,6 +2046,8 @@ a[aria-disabled="true"] {
     var o = options[opt];
     if (badgeEl) badgeEl.textContent = o.badge;
     if (descEl)  descEl.textContent  = o.desc;
+    var ctaText = document.getElementById('quote-cta-text');
+    if (ctaText) ctaText.textContent = o.cta;
     qtyInput.value = o.default;
     tabBrand.setAttribute('aria-selected', opt === 'brand' ? 'true' : 'false');
     tabCustom.setAttribute('aria-selected', opt === 'custom' ? 'true' : 'false');
