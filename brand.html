@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DY92E0PLP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9DY92E0PLP');
+</script>
+<!-- PostHog -->
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="xi Si init Ni ji pr qi Ui $i capture calculateEventProperties Zi register register_once register_for_session unregister unregister_for_session Yi getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Ki identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Qi Wi createPersonProfile setInternalOrTestUser Ji Fi tn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing zi debug mr it getPageViewId captureTraceFeedback captureTraceMetric Ri".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_xPQrAYFARRuvNuPRWE9ini8Ty5NVWGZDiyaJvJqMaTJj', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2026-05-30',
+        person_profiles: 'identified_only',
+    })
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DineWipes Branded Wipes — ₹1.95/wipe, No Minimum, Ships in 48h</title>
+<meta name="description" content="Order DineWipes-branded individually sealed wet wipes for your restaurant. ₹1.95 per wipe. No minimum. Ships in 48h anywhere in India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:       #FAFAFA;
+  --surface:  #F2F2F2;
+  --hover:    #E8E8E8;
+  --text:     #0A0A0A;
+  --muted:    #777777;
+  --accent:   #0A0A0A;
+  --border:   rgba(0,0,0,0.10);
+  --border-m: rgba(0,0,0,0.20);
+  --serif:    'Plus Jakarta Sans', sans-serif;
+  --sans:     'Inter', sans-serif;
+}
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(250,250,250,0.95); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  height: 56px; display: flex; align-items: center;
+}
+.nav-inner {
+  width: 100%; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo img { height: 28px; width: auto; filter: brightness(0); }
+.nav-right { display: flex; align-items: center; gap: 24px; }
+.nav-back {
+  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--bg); background: var(--text); border-radius: 2px;
+  padding: 7px 16px; transition: background 0.2s;
+}
+.nav-back:hover { background: #333333; }
+.nav-type-toggle { display: none; }
+.nav-type-btn {
+  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
+  padding: 7px 16px; color: var(--muted); background: none;
+  border: none; cursor: pointer; font-family: var(--sans);
+  transition: background 0.15s, color 0.15s;
+}
+.nav-type-btn:hover { color: var(--text); background: var(--hover); }
+.nav-type-btn.active { background: var(--accent); color: var(--bg); }
+
+/* LAYOUT */
+.product-page {
+  padding-top: 56px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+/* IMAGE PANEL */
+.img-panel {
+  position: sticky; top: 56px;
+  height: calc(100vh - 56px);
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  overflow: hidden;
+}
+.carousel { position: relative; width: 100%; height: 100%; }
+.carousel-slide {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  opacity: 0; transition: opacity 0.7s ease;
+}
+.carousel-slide.active { opacity: 1; }
+
+/* INFO PANEL */
+.info-panel {
+  padding: 48px 52px;
+  display: flex; flex-direction: column;
+  min-height: calc(100vh - 56px);
+}
+
+.product-category {
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 16px;
+  display: flex; align-items: center; gap: 8px;
+}
+.product-category::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--text); flex-shrink: 0;
+}
+
+.product-name-row {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 16px; margin-bottom: 20px;
+}
+.product-name {
+  font-family: var(--serif);
+  font-size: clamp(26px, 2.8vw, 38px);
+  font-weight: 400; line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+.product-price {
+  font-family: var(--serif);
+  font-size: 22px; font-weight: 300;
+  color: var(--text); white-space: nowrap; flex-shrink: 0;
+}
+
+.divider { height: 1px; background: var(--border); margin: 24px 0; }
+
+.product-desc {
+  font-size: 15px; color: var(--muted); line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+/* SPECS */
+.specs { display: flex; flex-wrap: nowrap; gap: 8px; margin-bottom: 28px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.specs::-webkit-scrollbar { display: none; }
+.spec-tag { flex-shrink: 0; }
+.spec-tag {
+  font-size: 12px; color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 5px 12px; border-radius: 2px;
+}
+
+/* FEATURE LIST */
+.feature-list { display: flex; flex-direction: column; gap: 11px; margin-bottom: 32px; }
+.feature-item { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--text); }
+.feature-item::before {
+  content: ''; width: 4px; height: 4px; border-radius: 50%;
+  background: var(--muted); flex-shrink: 0; margin-top: 7px;
+}
+
+/* STEPPER */
+.order-label { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+.stepper {
+  display: flex; align-items: center;
+  border: 1px solid var(--border-m); border-radius: 2px;
+  width: fit-content; margin-bottom: 8px;
+}
+.stepper-btn {
+  width: 44px; height: 44px; background: none; border: none;
+  color: var(--text); font-size: 20px; cursor: pointer;
+  font-family: var(--sans); transition: background 0.15s;
+}
+.stepper-btn:hover { background: var(--hover); }
+.stepper-input {
+  width: 90px; height: 44px; background: none; border: none;
+  border-left: 1px solid var(--border); border-right: 1px solid var(--border);
+  color: var(--text); font-family: var(--serif); font-size: 18px;
+  text-align: center; outline: none;
+}
+.stepper-input::-webkit-outer-spin-button,
+.stepper-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.stepper-unit { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+.price-calc { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+.price-calc strong { color: var(--text); font-weight: 500; }
+
+/* CTA */
+.btn-order {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; padding: 16px 24px;
+  background: var(--accent); color: var(--bg);
+  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500;
+  border: none; border-radius: 2px; cursor: pointer; font-family: var(--sans);
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-order:hover { background: #333333; transform: translateY(-1px); }
+
+.cta-note { font-size: 13px; color: var(--muted); margin-top: 12px; text-align: center; }
+
+.cross-link { display: none; }
+
+/* Burger */
+.nav-burger {
+  display: none;
+  flex-direction: column; justify-content: center; align-items: center;
+  gap: 5px; width: 40px; height: 40px;
+  background: none; border: none; cursor: pointer; padding: 8px; flex-shrink: 0;
+}
+.nav-burger span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--text);
+  transition: transform 0.25s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.mobile-nav {
+  display: none; flex-direction: column;
+  position: fixed; top: 56px; left: 0; right: 0;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  z-index: 99; padding: 8px 24px 20px;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); padding: 15px 0;
+  border-bottom: 1px solid var(--border); transition: color 0.2s;
+}
+.mobile-nav a:last-child { border-bottom: none; }
+.mobile-nav a:hover { color: var(--text); }
+@media (max-width: 768px) {
+  .nav-burger { display: flex; }
+}
+
+/* Mobile sticky footer */
+.mob-bar {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
+  background: var(--surface); border-top: 1px solid var(--border);
+  padding: 12px 16px; gap: 8px;
+}
+.mob-bar-btn {
+  flex: 1; padding: 13px 4px; border-radius: 2px; border: none; cursor: pointer;
+  font-family: var(--sans); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  text-align: center; text-decoration: none; display: flex;
+  align-items: center; justify-content: center; gap: 5px;
+  white-space: nowrap;
+  transition: background 0.2s, opacity 0.2s;
+}
+.mob-bar-btn.secondary {
+  background: var(--bg); color: var(--text); border: 1px solid var(--border-m);
+}
+.mob-bar-btn.secondary:hover { background: var(--hover); }
+.mob-bar-btn.active {
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border-m);
+}
+.mob-bar-btn.primary {
+  background: var(--text); color: var(--bg); flex: 1.4;
+}
+.mob-bar-btn.primary:hover { background: #333333; }
+@media (max-width: 768px) {
+  .mob-bar { display: flex; }
+  body { padding-bottom: 72px; }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .product-page { display: block; }
+  .img-panel {
+    position: fixed; top: 56px; left: 0; right: 0;
+    height: 100vw; min-height: unset; max-height: unset;
+    border-right: none; border-bottom: 1px solid var(--border);
+    z-index: 40;
+  }
+  .info-panel {
+    padding: 32px 24px; min-height: auto;
+    margin-top: 100vw;
+  }
+  .nav-type-toggle { display: none; }
+  .nav-back { display: none; }
+  .product-name { font-size: 18px; white-space: nowrap; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="logo-white.webp" alt="DineWipes" height="28"></a>
+    <div class="nav-right">
+      <a class="nav-back" href="custom.html">Custom Branded</a>
+      <div class="nav-type-toggle">
+        <button class="nav-type-btn active" onclick="location.href='brand.html'">DineWipes Branded</button>
+        <button class="nav-type-btn" onclick="location.href='custom.html'">Custom Branded</button>
+      </div>
+      <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  <a href="index.html">← Back to site</a>
+  <a href="custom.html">Custom Branded</a>
+</div>
+
+<div class="product-page">
+
+  <div class="img-panel">
+    <div class="carousel">
+      <img class="carousel-slide active" src="brand-slide-1.webp" alt="DineWipes branded wipe packet">
+      <img class="carousel-slide" src="brand-slide-2.webp" alt="DineWipes freshness">
+      <img class="carousel-slide" src="brand-slide-3.webp" alt="DineWipes premium pack">
+    </div>
+  </div>
+
+  <div class="info-panel">
+    <div class="product-name-row">
+      <h1 class="product-name">DineWipes — Single Wet Wipe</h1>
+      <div class="product-price">₹1.95</div>
+    </div>
+
+    <div class="specs">
+      <span class="spec-tag">Alcohol-free</span>
+      <span class="spec-tag">Ships in 48 hours</span>
+      <span class="spec-tag">Pan-India delivery</span>
+    </div>
+
+    <ul class="feature-list">
+      <li class="feature-item">Sealed until your guest opens it — hygienic, every time</li>
+      <li class="feature-item">No minimum order · ships within 48 hours across India</li>
+      <li class="feature-item">Gentle, alcohol-free formula — safe for all skin types</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <div class="order-label">Quantity</div>
+    <div class="stepper">
+      <button class="stepper-btn" id="qty-minus" type="button">−</button>
+      <input class="stepper-input" id="qty-input" type="number" value="5000" min="1" step="500">
+      <button class="stepper-btn" id="qty-plus" type="button">+</button>
+    </div>
+    <p class="price-calc">Total estimate: <strong id="price-est">₹9,750</strong></p>
+
+    <a class="btn-order" id="wa-order" href="#" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.4 31.6l7.9-2.1c2.3 1.3 5 2 7.7 2 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.4c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.8 21 3.2 18.5 3.2 16 3.2 9 9 3.2 16 3.2S28.8 9 28.8 16 23 28.8 16 28.8zm7.6-9.1c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.5-.2.3-.5.3-.9.1-1.3-.6-2.5-1.4-3.5-2.5-.8-.8-1.5-1.8-2.1-2.7-.2-.3 0-.6.1-.8.3-.3.6-.7.9-1 .2-.3.3-.5.1-.9-.1-.3-1-2.4-1.3-3.1-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.3 2.1 3.3 5.2 4.6 2.6 1.1 3.1.9 3.7.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+      Order on WhatsApp
+    </a>
+    <p class="cta-note">We reply in 5 minutes · Ships within 48 hours</p>
+
+    <div class="cross-link">
+    </div>
+  </div>
+
+</div>
+
+<div class="mob-bar">
+  <a class="mob-bar-btn secondary" href="custom.html">Custom</a>
+  <span class="mob-bar-btn active">Standard</span>
+  <a class="mob-bar-btn primary" id="mob-wa" href="#">
+    <svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.4 31.6l7.9-2.1c2.3 1.3 5 2 7.7 2 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.4c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.8 21 3.2 18.5 3.2 16 3.2 9 9 3.2 16 3.2S28.8 9 28.8 16 23 28.8 16 28.8zm7.6-9.1c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.5-.2.3-.5.3-.9.1-1.3-.6-2.5-1.4-3.5-2.5-.8-.8-1.5-1.8-2.1-2.7-.2-.3 0-.6.1-.8.3-.3.6-.7.9-1 .2-.3.3-.5.1-.9-.1-.3-1-2.4-1.3-3.1-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.3 2.1 3.3 5.2 4.6 2.6 1.1 3.1.9 3.7.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+    Order
+  </a>
+</div>
+
+<script>
+  var WA_NUMBER = '918555008016';
+  function waLink(t) { return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(t); }
+
+  var qtyInput = document.getElementById('qty-input');
+  var waOrder  = document.getElementById('wa-order');
+  var mobWa    = document.getElementById('mob-wa');
+  var priceEst = document.getElementById('price-est');
+
+  function getQty() { return Math.max(1, parseInt(qtyInput.value, 10) || 1); }
+  function update() {
+    var qty = getQty();
+    var link = waLink('Hi DineWipes, I\'d like to order DineWipes-branded wipes.\n\nQuantity: ' + qty + ' units\n\nPlease share pricing and next steps.');
+    priceEst.textContent = '₹' + (qty * 1.95).toLocaleString('en-IN', { maximumFractionDigits: 0 });
+    waOrder.href = link;
+    if (mobWa) mobWa.href = link;
+  }
+
+  document.getElementById('qty-minus').onclick = function () { qtyInput.value = Math.max(1, getQty() - 500); update(); };
+  document.getElementById('qty-plus').onclick  = function () { qtyInput.value = getQty() + 500; update(); };
+  qtyInput.addEventListener('input', update);
+  update();
+
+  // Carousel
+  (function() {
+    var slides = document.querySelectorAll('.carousel-slide');
+    if (!slides.length) return;
+    var current = 0;
+    setInterval(function() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 2000);
+  })();
+
+  // Burger
+  (function() {
+    var burger = document.getElementById('nav-burger');
+    var nav = document.getElementById('mobile-nav');
+    if (!burger || !nav) return;
+    burger.addEventListener('click', function() {
+      var open = nav.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+    });
+    nav.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        nav.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+</body>
+</html>
