@@ -1528,11 +1528,30 @@ a[aria-disabled="true"] {
   .evidence-h2   { font-size: 24px; }
   .recall-h2     { font-size: 24px; }
   .usecases-h2   { font-size: 24px; }
+
+  /* AHIW: replace sticky panel with per-step images at natural size */
+  .ahiw-media { display: none; }
+  .ahiw-steps { padding: 0; }
+  .ahiw-step {
+    min-height: auto;
+    opacity: 1 !important;
+    padding: 0 28px 44px;
+    border-left: none;
+  }
+  .ahiw-step-img {
+    display: block;
+    margin: 0 0 24px;
+  }
+  .ahiw-step-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+  }
 }
 
 @media (max-width: 600px) {
   .ahiw { padding-bottom: 0; }
-  .ahiw-step:last-child { min-height: 20vh; }
   .fear-section, .why-stats, .evidence, .recall,
   .usecases, .custom-section, .process, .quote-section { padding: 96px 0; }
   .uc-item { padding: 40px 0 !important; }
