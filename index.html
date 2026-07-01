@@ -1564,11 +1564,12 @@ a[aria-disabled="true"] {
   background: var(--text); color: var(--bg); flex: 0 0 52px; border-color: var(--text);
 }
 .mob-bar-btn.primary:hover { background: #333333; border-color: #333333; }
-@keyframes custom-pulse {
-  0%, 100% { border-color: rgba(0,0,0,0.15); background: var(--bg); }
-  50%       { border-color: rgba(0,0,0,0.55); background: var(--surface); }
+@keyframes custom-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(0,0,0,0.28); border-color: rgba(0,0,0,0.60); }
+  70%  { box-shadow: 0 0 0 7px rgba(0,0,0,0); border-color: rgba(0,0,0,0.20); }
+  100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); border-color: rgba(0,0,0,0.20); }
 }
-#mob-custom-cta { animation: custom-pulse 2.8s ease-in-out infinite; }
+#mob-custom-cta { animation: custom-ring 2s ease-out infinite; }
 #mob-custom-cta:hover { animation: none; background: var(--hover); }
 @media (max-width: 960px) {
   .mob-bar { display: flex; padding-bottom: max(12px, env(safe-area-inset-bottom)); }
