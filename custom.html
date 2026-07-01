@@ -253,6 +253,23 @@ nav {
 .mobile-nav a:hover { color: var(--text); }
 @media (max-width: 768px) { .nav-burger { display: flex; } }
 
+/* Mob stepper */
+.mob-stepper { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.mob-stepper-btn {
+  width: 36px; height: 36px; border: 1px solid var(--border-m);
+  background: var(--bg); color: var(--text); font-size: 18px;
+  cursor: pointer; border-radius: 2px;
+  display: flex; align-items: center; justify-content: center;
+}
+.mob-stepper-input {
+  width: 68px; height: 36px; border: 1px solid var(--border-m);
+  background: var(--bg); color: var(--text); text-align: center;
+  font-family: var(--sans); font-size: 13px; font-weight: 500;
+  border-radius: 2px; -moz-appearance: textfield;
+}
+.mob-stepper-input::-webkit-outer-spin-button,
+.mob-stepper-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
 /* Mobile sticky footer */
 .mob-bar {
   display: none;
@@ -301,7 +318,10 @@ nav {
     padding: 24px 24px; margin-top: 0;
   }
   .nav-type-toggle { display: none; }
-  .nav-back { display: none; }
+  .nav-back { display: flex; }
+  .nav-burger { display: none !important; }
+  .mobile-nav { display: none !important; }
+  .qty-section { display: none; }
   .product-price span { display: block; }
   .product-name br { display: none; }
 }
@@ -356,6 +376,7 @@ nav {
       <li class="feature-item">Digital proof approved before production · 2–3 week lead time</li>
     </ul>
 
+    <div class="qty-section">
     <div class="divider"></div>
 
     <div class="order-label">Quantity</div>
@@ -371,6 +392,7 @@ nav {
       Get a Quote on WhatsApp
     </a>
     <p class="cta-note">We reply in 5 minutes · Quote shared same day</p>
+    </div>
 
     </div>
   </div>
@@ -378,11 +400,14 @@ nav {
 </div>
 
 <div class="mob-bar">
-  <a class="mob-bar-btn secondary" href="brand.html">Branded</a>
-  <span class="mob-bar-btn active">Custom</span>
-  <a class="mob-bar-btn primary" id="mob-wa" href="#">
+  <div class="mob-stepper">
+    <button class="mob-stepper-btn" id="mob-qty-minus" type="button">−</button>
+    <input class="mob-stepper-input" id="mob-qty-input" type="number" value="10000" min="1000" step="1000">
+    <button class="mob-stepper-btn" id="mob-qty-plus" type="button">+</button>
+  </div>
+  <a class="mob-bar-btn primary" id="mob-wa" href="#" target="_blank" rel="noopener" style="flex:1;">
     <svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.4 31.6l7.9-2.1c2.3 1.3 5 2 7.7 2 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.4c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.8 21 3.2 18.5 3.2 16 3.2 9 9 3.2 16 3.2S28.8 9 28.8 16 23 28.8 16 28.8zm7.6-9.1c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.5-.2.3-.5.3-.9.1-1.3-.6-2.5-1.4-3.5-2.5-.8-.8-1.5-1.8-2.1-2.7-.2-.3 0-.6.1-.8.3-.3.6-.7.9-1 .2-.3.3-.5.1-.9-.1-.3-1-2.4-1.3-3.1-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.3 2.1 3.3 5.2 4.6 2.6 1.1 3.1.9 3.7.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
-    Get Quote
+    Get Quote on WhatsApp
   </a>
 </div>
 
@@ -392,7 +417,6 @@ nav {
 
   var qtyInput  = document.getElementById('qty-input');
   var waOrder   = document.getElementById('wa-order');
-  var mobWa     = document.getElementById('mob-wa');
   var minWarn   = document.getElementById('min-warning');
 
   function getQty() { return Math.max(1, parseInt(qtyInput.value, 10) || 1); }
@@ -403,13 +427,25 @@ nav {
     minWarn.classList.toggle('visible', !valid);
     waOrder.classList.toggle('disabled', !valid);
     waOrder.href = link;
-    if (mobWa) mobWa.href = link;
   }
-
   document.getElementById('qty-minus').onclick = function () { qtyInput.value = Math.max(1000, getQty() - 1000); update(); };
   document.getElementById('qty-plus').onclick  = function () { qtyInput.value = getQty() + 1000; update(); };
   qtyInput.addEventListener('input', update);
   update();
+
+  // Mobile stepper
+  var mobQtyInput = document.getElementById('mob-qty-input');
+  var mobWa = document.getElementById('mob-wa');
+  function getMobQty() { return Math.max(1000, parseInt(mobQtyInput.value, 10) || 1000); }
+  function updateMob() {
+    var qty = getMobQty();
+    var link = waLink('Hi DineWipes, I\'m interested in custom-branded wipes with my own logo.\n\nQuantity: ' + qty + ' units\n\nPlease share pricing, design process and next steps.');
+    if (mobWa) mobWa.href = link;
+  }
+  document.getElementById('mob-qty-minus').onclick = function () { mobQtyInput.value = Math.max(1000, getMobQty() - 1000); updateMob(); };
+  document.getElementById('mob-qty-plus').onclick  = function () { mobQtyInput.value = getMobQty() + 1000; updateMob(); };
+  mobQtyInput.addEventListener('input', updateMob);
+  updateMob();
 
   // Carousel
   (function() {
