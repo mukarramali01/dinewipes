@@ -24,8 +24,8 @@
 <meta name="description" content="Single wet wipes supplier in Hyderabad — individually sealed, alcohol-free. Custom branded with your logo or standard DineWipes packs for restaurants, cafes &amp; hotels. No minimum on standard packs · ships in 48 hours across India.">
 <meta name="keywords" content="single wet wipes hyderabad, wet wipes sachets hyderabad, wet wipes for restaurants hyderabad, custom wet wipes hyderabad, branded wet wipes hyderabad, wet wipes supplier hyderabad, logo printed wet wipes hyderabad, individual wet wipes hyderabad, bulk wet wipes hyderabad, restaurant wet wipes hyderabad, wet tissue sachet hyderabad, wet tissue packet hyderabad, disposable wet wipes hyderabad, food service wet wipes hyderabad, hospitality wet wipes hyderabad, single use wet wipes hyderabad, customized single wet wipes, cafe wet wipes, cafe single wet wipes, restaurant single wet wipes, individually wrapped wet wipes, custom branded wet wipes, wet wipes manufacturer hyderabad">
 <link rel="canonical" href="https://dinewipes.in/">
-<link rel="preload" as="image" href="desktop-hero.webp" media="(min-width: 641px)" fetchpriority="high">
-<link rel="preload" as="image" href="mobile-hero.webp" media="(max-width: 640px)" fetchpriority="high">
+<link rel="preload" as="image" href="hero-desktop-v9.webp" media="(min-width: 641px)" fetchpriority="high">
+<link rel="preload" as="image" href="hero-mobile-v9.webp" media="(max-width: 640px)" fetchpriority="high">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dinewipes.in/">
@@ -76,26 +76,26 @@
   ]
 }
 </script>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230C1015'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%236F98A8'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FAFAFA'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%230A0A0A'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 /* =============================================
-   DESIGN TOKENS — V6 LUXURY
+   DESIGN TOKENS — V9 WHITE/BLACK PREMIUM
    ============================================= */
 :root {
-  --bg:        #0C1015;
-  --surface:   #171D24;
-  --hover:     #222A33;
-  --text:      #F2F3F5;
-  --muted:     #A3ABB3;
-  --accent:    #6F98A8;
-  --accent-h:  #83A9B8;
-  --mint:      #69D6B3;
-  --border:    rgba(255,255,255,0.08);
-  --border-m:  rgba(255,255,255,0.13);
+  --bg:        #FAFAFA;
+  --surface:   #F2F2F2;
+  --hover:     #E8E8E8;
+  --text:      #0A0A0A;
+  --muted:     #777777;
+  --accent:    #0A0A0A;
+  --accent-h:  #333333;
+  --mint:      #0A0A0A;
+  --border:    rgba(0,0,0,0.10);
+  --border-m:  rgba(0,0,0,0.20);
   --serif:     'Plus Jakarta Sans', var(--sans);
   --sans:      'Inter', sans-serif;
   --maxw:      1200px;
@@ -151,12 +151,12 @@ ul { list-style: none; }
 .btn-accent:hover {
   background: var(--accent-h);
   transform: translateY(-1px);
-  box-shadow: 0 6px 24px rgba(111,152,168,0.22);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
 }
 .btn-accent:active { transform: translateY(0); box-shadow: none; }
 .btn-accent svg { flex-shrink: 0; transition: transform 0.2s var(--ease); }
 .btn-accent:hover svg { transform: scale(1.1); }
-.btn-accent:focus-visible { outline: 2px solid rgba(111,152,168,0.65); outline-offset: 3px; }
+.btn-accent:focus-visible { outline: 2px solid rgba(0,0,0,0.5); outline-offset: 3px; }
 
 .btn-ghost {
   display: inline-flex;
@@ -174,9 +174,9 @@ ul { list-style: none; }
   transition: border-color 0.22s ease, color 0.22s ease, transform 0.18s ease;
   text-decoration: none;
 }
-.btn-ghost:hover { border-color: rgba(255,255,255,0.4); color: var(--text); transform: translateY(-1px); }
+.btn-ghost:hover { border-color: rgba(0,0,0,0.5); color: var(--text); transform: translateY(-1px); }
 .btn-ghost:active { transform: translateY(0); }
-.btn-ghost:focus-visible { outline: 2px solid rgba(255,255,255,0.3); outline-offset: 3px; }
+.btn-ghost:focus-visible { outline: 2px solid rgba(0,0,0,0.3); outline-offset: 3px; }
 
 a[aria-disabled="true"] {
   cursor: not-allowed;
@@ -248,14 +248,55 @@ a[aria-disabled="true"] {
 }
 .nav-cta:hover { background: var(--accent-h); transform: translateY(-1px); }
 .nav-cta:active { transform: translateY(0); }
-.nav-cta:focus-visible { outline: 2px solid rgba(111,152,168,0.65); outline-offset: 3px; }
+.nav-cta:focus-visible { outline: 2px solid rgba(0,0,0,0.5); outline-offset: 3px; }
+
+/* Burger */
+.nav-burger {
+  display: none;
+  flex-direction: column; justify-content: center; align-items: center;
+  gap: 5px; width: 40px; height: 40px;
+  background: none; border: none; cursor: pointer; padding: 8px; flex-shrink: 0;
+}
+.nav-burger span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--text);
+  transition: transform 0.25s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile Nav Drawer */
+.mobile-nav {
+  display: none;
+  position: fixed; top: 72px; left: 0; right: 0;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  z-index: 99; padding: 8px 28px 20px;
+  flex-direction: column;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s;
+}
+.mobile-nav a:last-child { border-bottom: none; }
+.mobile-nav a:hover { color: var(--text); }
+.mobile-nav .mnav-divider {
+  height: 1px; background: var(--border-m); margin: 8px 0;
+}
+.mobile-nav .mnav-product {
+  color: var(--text);
+}
 
 /* =============================================
    HERO
    ============================================= */
 .hero {
   position: relative;
-  background: url('desktop-hero.webp') 68% center / cover no-repeat var(--bg);
+  background: url('hero-desktop-v9.webp') 68% center / cover no-repeat var(--bg);
   padding-top: 72px;
   min-height: 100vh;
   display: flex;
@@ -264,14 +305,20 @@ a[aria-disabled="true"] {
 .hero::before {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(12,16,21,0.97) 0%,
-    rgba(12,16,21,0.93) 35%,
-    rgba(12,16,21,0.42) 58%,
-    rgba(12,16,21,0.0) 76%
-  );
+  background: none;
 }
+
+/* Hero text is white — sitting directly on dark photo */
+.hero .hero-eyebrow { color: rgba(255,255,255,0.55); }
+.hero .hero-eyebrow::before { background: rgba(255,255,255,0.55); }
+.hero .hero-h1 { color: #FFFFFF; }
+.hero .hero-h1 em { color: #FFFFFF; }
+.hero .hero-rule { background: rgba(255,255,255,0.18); }
+.hero .hero-lead { color: rgba(255,255,255,0.55); }
+.hero .hero-feats { border-top-color: rgba(255,255,255,0.12); }
+.hero .hero-feat { color: rgba(255,255,255,0.45); }
+.hero .btn-accent { background: #FFFFFF; color: #0A0A0A; }
+.hero .btn-accent:hover { background: #E8E8E8; }
 .hero-inner {
   position: relative; z-index: 1;
   width: 100%;
@@ -392,7 +439,7 @@ a[aria-disabled="true"] {
 .fear-rule {
   width: 28px; height: 1px;
   background: var(--accent);
-  opacity: 0.6;
+  opacity: 0.4;
   margin: 40px 0;
 }
 .fear-sub {
@@ -623,7 +670,7 @@ a[aria-disabled="true"] {
 .compare tr:last-child td { border-bottom: none; }
 .compare td:first-child { color: var(--text); font-weight: 400; padding-right: 20px; }
 .compare td:nth-child(2) { text-align: center; color: var(--accent); font-weight: 500; }
-.compare td:nth-child(3) { text-align: center; color: rgba(255,255,255,0.35); }
+.compare td:nth-child(3) { text-align: center; color: rgba(0,0,0,0.30); }
 .compare-tagline {
   font-family: var(--serif);
   font-size: 17px;
@@ -723,7 +770,7 @@ a[aria-disabled="true"] {
   justify-content: center;
   padding: 0 0 0 36px;
   border-left: 1px solid transparent;
-  opacity: 0.22;
+  opacity: 0.25;
   transition: opacity 0.55s ease, border-color 0.55s ease;
 }
 .ahiw-step.is-active { opacity: 1; border-left-color: var(--accent); }
@@ -735,12 +782,12 @@ a[aria-disabled="true"] {
   font-family: var(--serif);
   font-size: 52px;
   font-weight: 300;
-  color: rgba(255,255,255,0.07);
+  color: rgba(0,0,0,0.07);
   line-height: 1;
   margin-bottom: 24px;
   transition: color 0.55s ease;
 }
-.ahiw-step.is-active .ahiw-num { color: rgba(111,152,168,0.45); }
+.ahiw-step.is-active .ahiw-num { color: rgba(0,0,0,0.20); }
 
 .ahiw-title {
   font-family: var(--serif);
@@ -965,7 +1012,6 @@ a[aria-disabled="true"] {
   font-family: var(--serif);
   font-size: 18px;
   font-weight: 600;
-  color: var(--accent);
   font-style: italic;
   color: var(--muted);
   margin-bottom: 44px;
@@ -1132,7 +1178,7 @@ a[aria-disabled="true"] {
   font-family: var(--serif);
   font-size: 54px;
   font-weight: 300;
-  color: rgba(255,255,255,0.06);
+  color: rgba(0,0,0,0.07);
   line-height: 1;
   margin-bottom: 20px;
 }
@@ -1232,7 +1278,7 @@ a[aria-disabled="true"] {
 }
 .tab:not([aria-selected="true"]):hover { color: var(--text); background: var(--hover); }
 .tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
-.tab:focus-visible { outline: 2px solid rgba(111,152,168,0.4); outline-offset: -2px; }
+.tab:focus-visible { outline: 2px solid rgba(0,0,0,0.4); outline-offset: -2px; }
 
 .panel { padding: 40px; }
 .panel-badge {
@@ -1242,7 +1288,7 @@ a[aria-disabled="true"] {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--mint);
-  border: 1px solid rgba(105,214,179,0.2);
+  border: 1px solid rgba(0,0,0,0.15);
   padding: 4px 12px;
   border-radius: 1px;
   margin-bottom: 14px;
@@ -1291,7 +1337,7 @@ a[aria-disabled="true"] {
 .footer-col p {
   display: block;
   font-size: 13px;
-  color: rgba(255,255,255,0.36);
+  color: rgba(0,0,0,0.42);
   font-weight: 300;
   margin-bottom: 12px;
   transition: color 0.22s ease, transform 0.22s ease;
@@ -1333,14 +1379,14 @@ a[aria-disabled="true"] {
   transform: translateY(10px);
   pointer-events: none;
   transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), background 0.22s var(--ease);
-  box-shadow: 0 4px 28px rgba(12,16,21,0.6);
+  box-shadow: 0 4px 28px rgba(0,0,0,0.14);
 }
 .wa-fixed.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
 .wa-fixed.is-visible:hover { background: var(--accent-h); transform: translateY(-2px); }
 .wa-fixed.is-visible:active { transform: translateY(0); }
 .wa-fixed svg { flex-shrink: 0; transition: transform 0.2s var(--ease); }
 .wa-fixed:hover svg { transform: scale(1.1); }
-.wa-fixed:focus-visible { outline: 2px solid rgba(111,152,168,0.65); outline-offset: 3px; }
+.wa-fixed:focus-visible { outline: 2px solid rgba(0,0,0,0.5); outline-offset: 3px; }
 
 /* =============================================
    SCROLL REVEAL
@@ -1396,19 +1442,11 @@ a[aria-disabled="true"] {
 
   /* Nav */
   .nav-links { display: none; }
+  .nav-burger { display: flex; }
 
   /* Hero */
-  .hero { background-image: url('mobile-hero.webp'); background-position: top center; }
-  .hero::before {
-    background: linear-gradient(
-      to bottom,
-      rgba(12,16,21,0.62) 0%,
-      rgba(12,16,21,0.1) 30%,
-      rgba(12,16,21,0.1) 52%,
-      rgba(12,16,21,0.9) 72%,
-      rgba(12,16,21,0.98) 100%
-    );
-  }
+  .hero { background-image: url('hero-mobile-v9.webp'); background-position: top center; }
+  .hero::before { background: none; }
   .hero-inner { padding: 92px 28px 48px; }
   .hero-lead { max-width: 100%; }
   .hero-feats { flex-direction: column; gap: 0; }
@@ -1502,31 +1540,63 @@ a[aria-disabled="true"] {
   .steps { grid-template-columns: 1fr; }
   .quote-card { border-left: none; border-right: none; border-radius: 0; }
 }
+
+/* Mobile sticky bar */
+.mob-bar {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 110;
+  background: var(--bg); border-top: 1px solid var(--border);
+  padding: 12px 16px; gap: 8px;
+}
+.mob-bar-btn {
+  flex: 1; padding: 12px 8px; border-radius: 2px; border: 1px solid var(--border-m); cursor: pointer;
+  font-family: var(--sans); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.10em; text-transform: uppercase;
+  text-align: center; text-decoration: none;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  background: var(--bg); color: var(--text);
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+.mob-bar-btn:hover { background: var(--hover); }
+.mob-bar-btn.primary {
+  background: var(--text); color: var(--bg); flex: 0 0 52px; border-color: var(--text);
+}
+.mob-bar-btn.primary:hover { background: #333333; border-color: #333333; }
+@media (max-width: 960px) {
+  .mob-bar { display: flex; }
+  .wa-fixed { display: none !important; }
+  body { padding-bottom: 72px; }
+}
 </style>
 </head>
 <body>
 
-<!-- =============================================
-     NAV
-     ============================================= -->
+<!-- NAV -->
 <nav class="nav" aria-label="Primary navigation">
   <div class="nav-inner">
     <a href="#" aria-label="DineWipes home">
-      <img src="logo-white.webp" alt="DineWipes" height="36" style="display:block;height:36px;width:auto;">
+      <img src="logo-white.webp" alt="DineWipes" height="36" style="display:block;height:36px;width:auto;filter:brightness(0);">
     </a>
     <ul class="nav-links">
       <li><a href="#why">Why DineWipes</a></li>
       <li><a href="#quote">Get a Quote</a></li>
       <li><a href="#usecases">Who It's For</a></li>
-      <li><a href="#custom-branding">Custom Branding</a></li>
+      <li><a href="brand.html">DineWipes Branded</a></li>
+      <li><a href="custom.html">Custom Branded</a></li>
     </ul>
-    <a class="nav-cta" href="#quote">Order Your Wipe</a>
+    <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
-<!-- =============================================
-     HERO
-     ============================================= -->
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  <a href="#why" class="mnav-link">Why DineWipes</a>
+  <a href="#quote" class="mnav-link">Get a Quote</a>
+  <a href="#usecases" class="mnav-link">Who It's For</a>
+</div>
+
+<!-- HERO -->
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero-inner">
     <div class="hero-text">
@@ -1552,9 +1622,7 @@ a[aria-disabled="true"] {
   </div>
 </section>
 
-<!-- =============================================
-     FEAR — THE INVISIBLE DETAIL
-     ============================================= -->
+<!-- FEAR — THE INVISIBLE DETAIL -->
 <section class="fear-section" aria-label="Why this matters">
   <div class="fear-inner">
     <div class="fear-main reveal">
@@ -1569,9 +1637,7 @@ a[aria-disabled="true"] {
   </div>
 </section>
 
-<!-- =============================================
-     WHY — EDITORIAL STATS
-     ============================================= -->
+<!-- WHY — EDITORIAL STATS -->
 <section class="why-stats" id="why" aria-labelledby="why-heading">
   <div class="wrap">
     <div class="india-block reveal">
@@ -1610,9 +1676,7 @@ a[aria-disabled="true"] {
   </div>
 </section>
 
-<!-- =============================================
-     EVIDENCE — REVIEW RISK + COMPARE
-     ============================================= -->
+<!-- EVIDENCE — REVIEW RISK + COMPARE -->
 <section class="evidence" aria-labelledby="evidence-heading">
   <div class="wrap">
     <div class="evidence-inner">
@@ -1666,9 +1730,7 @@ a[aria-disabled="true"] {
   </div>
 </section>
 
-<!-- =============================================
-     HOW IT WORKS — STICKY SCROLL
-     ============================================= -->
+<!-- HOW IT WORKS — STICKY SCROLL -->
 <section class="ahiw" id="how-it-works" aria-labelledby="ahiw-heading">
   <div class="ahiw-header reveal">
     <div class="ahiw-eyebrow">How It Works</div>
@@ -1688,7 +1750,7 @@ a[aria-disabled="true"] {
     <div class="ahiw-steps">
       <div class="ahiw-step is-active" data-ahiw-step="1">
         <div class="ahiw-step-img">
-          <img src="hiw-1-m.webp" alt="Guest reaches for a DineWipe on the table" loading="lazy">
+          <img src="hiw-1-m.webp" alt="Guest holding a DineWipes branded wipe packet at a restaurant table" loading="lazy">
         </div>
         <div class="ahiw-num">01</div>
         <h3 class="ahiw-title">Wipe is on the table before the menu arrives.</h3>
@@ -1725,9 +1787,7 @@ a[aria-disabled="true"] {
   </div>
 </section>
 
-<!-- =============================================
-     BRAND RECALL
-     ============================================= -->
+<!-- BRAND RECALL -->
 <section class="recall" aria-labelledby="recall-heading">
   <div class="wrap">
     <div class="recall-head reveal">
@@ -1752,9 +1812,7 @@ a[aria-disabled="true"] {
   </div>
 </section>
 
-<!-- =============================================
-     USE CASES
-     ============================================= -->
+<!-- USE CASES -->
 <section class="usecases" id="usecases" aria-labelledby="usecases-heading">
   <div class="wrap">
     <div class="section-head reveal">
@@ -1802,9 +1860,7 @@ a[aria-disabled="true"] {
   </div>
 </section>
 
-<!-- =============================================
-     CUSTOM BRANDING
-     ============================================= -->
+<!-- CUSTOM BRANDING -->
 <section class="custom-section" id="custom-branding" aria-labelledby="custom-heading">
   <div class="wrap">
     <div class="custom-grid reveal">
@@ -1855,9 +1911,7 @@ a[aria-disabled="true"] {
   </div>
 </section>
 
-<!-- =============================================
-     GET A QUOTE
-     ============================================= -->
+<!-- GET A QUOTE -->
 <section class="quote-section" id="quote" aria-labelledby="quote-heading">
   <div class="wrap">
     <div class="quote-head reveal">
@@ -1898,13 +1952,11 @@ a[aria-disabled="true"] {
   </div>
 </section>
 
-<!-- =============================================
-     FOOTER
-     ============================================= -->
+<!-- FOOTER -->
 <footer class="footer" id="contact">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="logo-white.webp" alt="DineWipes" height="44" style="display:block;height:44px;width:auto;margin-bottom:16px;">
+      <img src="logo-white.webp" alt="DineWipes" height="44" style="display:block;height:44px;width:auto;margin-bottom:16px;filter:brightness(0);">
       <p class="footer-tagline">Clean hands before the first bite. Every time.</p>
     </div>
     <div class="footer-col">
@@ -1928,22 +1980,25 @@ a[aria-disabled="true"] {
   </div>
 </footer>
 
-<!-- =============================================
-     FIXED WHATSAPP BUTTON
-     ============================================= -->
+<!-- FIXED WHATSAPP BUTTON -->
 <a class="wa-fixed" id="fixed-wa" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.4 31.6l7.9-2.1c2.3 1.3 5 2 7.7 2 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.4c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.8 21 3.2 18.5 3.2 16 3.2 9 9 3.2 16 3.2S28.8 9 28.8 16 23 28.8 16 28.8zm7.6-9.1c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.5-.2.3-.5.3-.9.1-1.3-.6-2.5-1.4-3.5-2.5-.8-.8-1.5-1.8-2.1-2.7-.2-.3 0-.6.1-.8.3-.3.6-.7.9-1 .2-.3.3-.5.1-.9-.1-.3-1-2.4-1.3-3.1-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.3 2.1 3.3 5.2 4.6 2.6 1.1 3.1.9 3.7.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
   Order Now
 </a>
 
-<!-- =============================================
-     SCRIPTS
-     ============================================= -->
+<div class="mob-bar">
+  <a class="mob-bar-btn" href="brand.html">Standard Pack</a>
+  <a class="mob-bar-btn" href="custom.html">Custom Branded</a>
+  <a class="mob-bar-btn primary" id="mob-wa-index" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.4 31.6l7.9-2.1c2.3 1.3 5 2 7.7 2 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.4c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.8 21 3.2 18.5 3.2 16 3.2 9 9 3.2 16 3.2S28.8 9 28.8 16 23 28.8 16 28.8zm7.6-9.1c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.5-.2.3-.5.3-.9.1-1.3-.6-2.5-1.4-3.5-2.5-.8-.8-1.5-1.8-2.1-2.7-.2-.3 0-.6.1-.8.3-.3.6-.7.9-1 .2-.3.3-.5.1-.9-.1-.3-1-2.4-1.3-3.1-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.3 2.1 3.3 5.2 4.6 2.6 1.1 3.1.9 3.7.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+  </a>
+</div>
+
+<!-- SCRIPTS -->
 <script>
 (function () {
   'use strict';
 
-  /* ---- WhatsApp link builder ---- */
   var WA_NUMBER = '918555008016';
   var GENERIC_TEXT = 'Hi there, I would like to get in touch with you regarding single-use wet wipes';
 
@@ -1952,12 +2007,11 @@ a[aria-disabled="true"] {
   }
 
   var genericLink = waLink(GENERIC_TEXT);
-  ['hero-wa', 'footer-wa', 'fixed-wa', 'process-wa'].forEach(function (id) {
+  ['hero-wa', 'footer-wa', 'fixed-wa', 'process-wa', 'mob-wa-index'].forEach(function (id) {
     var el = document.getElementById(id);
     if (el) el.setAttribute('href', genericLink);
   });
 
-  /* ---- Quote builder options ---- */
   var options = {
     brand: {
       badge: 'No minimum — ships in 48 hours',
@@ -1986,7 +2040,6 @@ a[aria-disabled="true"] {
   };
 
   var currentOption = 'brand';
-
   var badgeEl  = document.getElementById('panel-badge');
   var descEl   = document.getElementById('panel-desc');
   var noteEl   = document.getElementById('panel-note');
@@ -2001,11 +2054,9 @@ a[aria-disabled="true"] {
     var o = options[currentOption];
     var qty = getQty();
     ctaEl.setAttribute('href', waLink(o.message(qty)));
-
     var underMin = qty < o.min;
     ctaEl.toggleAttribute('disabled', underMin);
     ctaEl.setAttribute('aria-disabled', underMin ? 'true' : 'false');
-
     if (noteEl) {
       noteEl.classList.toggle('show', underMin);
       if (underMin) {
@@ -2044,7 +2095,6 @@ a[aria-disabled="true"] {
   if (qtyInput) qtyInput.addEventListener('input', updateCta);
   updateCta();
 
-  /* ---- Custom branded section stepper ---- */
   var customQtyInput = document.getElementById('custom-qty-input');
   var customCta      = document.getElementById('custom-wa-cta');
   var customNoteEl   = document.getElementById('custom-panel-note');
@@ -2084,7 +2134,6 @@ a[aria-disabled="true"] {
   customQtyInput.addEventListener('input', updateCustomCta);
   updateCustomCta();
 
-  /* ---- Fixed WA bar (appears after 400px scroll) ---- */
   var fixedWa  = document.getElementById('fixed-wa');
   var waVisible = false;
   window.addEventListener('scroll', function () {
@@ -2095,7 +2144,6 @@ a[aria-disabled="true"] {
     }
   }, { passive: true });
 
-  /* ---- Scroll reveal (Intersection Observer) ---- */
   if ('IntersectionObserver' in window) {
     var revealEls = document.querySelectorAll('.reveal');
     var observer  = new IntersectionObserver(function (entries) {
@@ -2111,12 +2159,10 @@ a[aria-disabled="true"] {
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('revealed'); });
   }
 
-  /* ---- Hero revealed immediately ---- */
   document.querySelectorAll('.hero .hero-text > *').forEach(function (el) {
     setTimeout(function () { el.classList.add('revealed'); }, 60);
   });
 
-  /* ---- Apple-style sticky scroll — How It Works ---- */
   (function () {
     var steps = document.querySelectorAll('.ahiw-step');
     var imgs  = document.querySelectorAll('.ahiw-img');
@@ -2146,6 +2192,26 @@ a[aria-disabled="true"] {
       steps.forEach(function (s) { s.classList.add('is-active'); });
       imgs.forEach(function (i) { i.classList.add('is-active'); });
     }
+  })();
+
+  (function () {
+    var burger = document.getElementById('nav-burger');
+    var mobileNav = document.getElementById('mobile-nav');
+    if (!burger || !mobileNav) return;
+    burger.addEventListener('click', function () {
+      var open = mobileNav.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      mobileNav.setAttribute('aria-hidden', String(!open));
+    });
+    mobileNav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        mobileNav.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        mobileNav.setAttribute('aria-hidden', 'true');
+      });
+    });
   })();
 
 })();
