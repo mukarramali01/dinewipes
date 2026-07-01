@@ -1505,14 +1505,22 @@ a[aria-disabled="true"] {
     align-items: stretch;
   }
   .hero-inner {
-    flex: 1; display: flex; flex-direction: column;
-    padding: 90px 24px calc(104px + env(safe-area-inset-bottom, 0px)); max-width: 100%;
+    flex: 1; position: relative;
+    padding: 90px 24px 0; max-width: 100%;
   }
-  .hero-text { flex: 1; display: flex; flex-direction: column; }
+  .hero-text { display: flex; flex-direction: column; }
   .hero-rule { margin: 20px 0; }
-  .hero-lead { margin-top: auto; padding-top: 24px; font-size: 15px; }
-  .hero-actions { margin-top: auto; padding-top: 24px; }
-  .hero-feats { margin-top: 28px; padding-top: 20px; }
+  .hero-lead { padding-top: 0; font-size: 15px; }
+  .hero-actions {
+    position: absolute; left: 24px; right: 24px;
+    bottom: calc(108px + env(safe-area-inset-bottom, 0px));
+    margin-top: 0; padding-top: 0;
+  }
+  .hero-feats {
+    position: absolute; left: 24px; right: 24px;
+    bottom: calc(36px + env(safe-area-inset-bottom, 0px));
+    margin-top: 0; padding-top: 0;
+  }
 
   /* Font size fixes for mobile */
   .hero-h1       { font-size: 26px; letter-spacing: -0.01em; }
