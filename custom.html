@@ -253,6 +253,17 @@ nav {
 .mobile-nav a:hover { color: var(--text); }
 @media (max-width: 768px) { .nav-burger { display: flex; } }
 
+/* Mob warning */
+.mob-warn {
+  display: none;
+  position: fixed; bottom: 60px; left: 0; right: 0; z-index: 91;
+  background: #FFF8E7; border-top: 1px solid #F0D080;
+  padding: 8px 16px;
+  font-family: var(--sans); font-size: 11px; color: #7A5C00;
+  letter-spacing: 0.01em; line-height: 1.4;
+}
+.mob-warn.visible { display: block; }
+
 /* Mob stepper */
 .mob-stepper { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
 .mob-stepper-btn {
@@ -399,6 +410,7 @@ nav {
 
 </div>
 
+<div class="mob-warn" id="mob-warn">Custom Branding starts at 10,000 units. For 5,000–9,999 units,</div>
 <div class="mob-bar">
   <div class="mob-stepper">
     <button class="mob-stepper-btn" id="mob-qty-minus" type="button">−</button>
@@ -437,10 +449,12 @@ nav {
   var mobQtyInput = document.getElementById('mob-qty-input');
   var mobWa = document.getElementById('mob-wa');
   function getMobQty() { return Math.max(10000, parseInt(mobQtyInput.value, 10) || 10000); }
+  var mobWarnEl = document.getElementById('mob-warn');
   function updateMob() {
     var qty = getMobQty();
     var link = waLink('Hi DineWipes, I\'m interested in custom-branded wipes with my own logo.\n\nQuantity: ' + qty + ' units\n\nPlease share pricing, design process and next steps.');
     if (mobWa) mobWa.href = link;
+    if (mobWarnEl) mobWarnEl.classList.toggle('visible', qty < 10000);
   }
   document.getElementById('mob-qty-minus').onclick = function () { mobQtyInput.value = Math.max(10000, getMobQty() - 1000); updateMob(); };
   document.getElementById('mob-qty-plus').onclick  = function () { mobQtyInput.value = getMobQty() + 1000; updateMob(); };
