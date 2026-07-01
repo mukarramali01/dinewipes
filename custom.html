@@ -436,13 +436,13 @@ nav {
   // Mobile stepper
   var mobQtyInput = document.getElementById('mob-qty-input');
   var mobWa = document.getElementById('mob-wa');
-  function getMobQty() { return Math.max(1000, parseInt(mobQtyInput.value, 10) || 1000); }
+  function getMobQty() { return Math.max(10000, parseInt(mobQtyInput.value, 10) || 10000); }
   function updateMob() {
     var qty = getMobQty();
     var link = waLink('Hi DineWipes, I\'m interested in custom-branded wipes with my own logo.\n\nQuantity: ' + qty + ' units\n\nPlease share pricing, design process and next steps.');
     if (mobWa) mobWa.href = link;
   }
-  document.getElementById('mob-qty-minus').onclick = function () { mobQtyInput.value = Math.max(1000, getMobQty() - 1000); updateMob(); };
+  document.getElementById('mob-qty-minus').onclick = function () { mobQtyInput.value = Math.max(10000, getMobQty() - 1000); updateMob(); };
   document.getElementById('mob-qty-plus').onclick  = function () { mobQtyInput.value = getMobQty() + 1000; updateMob(); };
   mobQtyInput.addEventListener('input', updateMob);
   updateMob();
