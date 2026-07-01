@@ -456,7 +456,11 @@ nav {
     if (mobWa) mobWa.href = link;
     if (mobWarnEl) mobWarnEl.classList.toggle('visible', qty < 10000);
   }
-  document.getElementById('mob-qty-minus').onclick = function () { mobQtyInput.value = Math.max(10000, getMobQty() - 1000); updateMob(); };
+  document.getElementById('mob-qty-minus').onclick = function () {
+    var cur = getMobQty();
+    if (cur <= 10000) { if (mobWarnEl) mobWarnEl.classList.add('visible'); return; }
+    mobQtyInput.value = Math.max(10000, cur - 1000); updateMob();
+  };
   document.getElementById('mob-qty-plus').onclick  = function () { mobQtyInput.value = getMobQty() + 1000; updateMob(); };
   mobQtyInput.addEventListener('input', updateMob);
   updateMob();
