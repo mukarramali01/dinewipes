@@ -19,7 +19,7 @@
     })
 </script>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>DineWipes Branded Wipes — ₹1.95/wipe, No Minimum, Ships in 48h</title>
 <meta name="description" content="Order DineWipes-branded individually sealed wet wipes for your restaurant. ₹1.95 per wipe. No minimum. Ships in 48h anywhere in India.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -278,8 +278,8 @@ nav {
 }
 .mob-bar-btn.primary:hover { background: #333333; }
 @media (max-width: 768px) {
-  .mob-bar { display: flex; }
-  body { padding-bottom: 72px; }
+  .mob-bar { display: flex; padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
 }
 
 /* MOBILE */
@@ -287,8 +287,8 @@ nav {
   html, body { height: 100%; overflow: hidden; }
   .product-page {
     display: flex; flex-direction: column;
-    height: calc(100vh - 56px);
-    padding-bottom: 72px;
+    height: calc(100vh - 56px - env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
     overflow: hidden;
   }
   .img-panel {

@@ -19,7 +19,7 @@
     })
 </script>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Single Wet Wipes Hyderabad | Custom Branded Wipes for Restaurants &amp; Cafes | DineWipes</title>
 <meta name="description" content="Single wet wipes supplier in Hyderabad — individually sealed, alcohol-free. Custom branded with your logo or standard DineWipes packs for restaurants, cafes &amp; hotels. No minimum on standard packs · ships in 48 hours across India.">
 <meta name="keywords" content="single wet wipes hyderabad, wet wipes sachets hyderabad, wet wipes for restaurants hyderabad, custom wet wipes hyderabad, branded wet wipes hyderabad, wet wipes supplier hyderabad, logo printed wet wipes hyderabad, individual wet wipes hyderabad, bulk wet wipes hyderabad, restaurant wet wipes hyderabad, wet tissue sachet hyderabad, wet tissue packet hyderabad, disposable wet wipes hyderabad, food service wet wipes hyderabad, hospitality wet wipes hyderabad, single use wet wipes hyderabad, customized single wet wipes, cafe wet wipes, cafe single wet wipes, restaurant single wet wipes, individually wrapped wet wipes, custom branded wet wipes, wet wipes manufacturer hyderabad">
@@ -1445,7 +1445,7 @@ a[aria-disabled="true"] {
   .nav-burger { display: flex; }
 
   /* Hero */
-  .hero { background-image: url('hero-mobile-v9.webp'); background-position: center 10%; background-size: 110%; }
+  .hero { background-image: url('hero-mobile-v9.webp'); background-position: center 20%; background-size: cover; }
   .hero::before { background: none; }
   .hero-inner { padding: 92px 28px 48px; }
   .hero-lead { max-width: 100%; }
@@ -1506,7 +1506,7 @@ a[aria-disabled="true"] {
   }
   .hero-inner {
     flex: 1; display: flex; flex-direction: column;
-    padding: 90px 24px 104px; max-width: 100%;
+    padding: 90px 24px calc(104px + env(safe-area-inset-bottom, 0px)); max-width: 100%;
   }
   .hero-text { flex: 1; display: flex; flex-direction: column; }
   .hero-rule { margin: 20px 0; }
@@ -1563,9 +1563,9 @@ a[aria-disabled="true"] {
 }
 .mob-bar-btn.primary:hover { background: #333333; border-color: #333333; }
 @media (max-width: 960px) {
-  .mob-bar { display: flex; }
+  .mob-bar { display: flex; padding-bottom: max(12px, env(safe-area-inset-bottom)); }
   .wa-fixed { display: none !important; }
-  body { padding-bottom: 72px; }
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
 }
 </style>
 </head>
