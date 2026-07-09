@@ -72,11 +72,112 @@
       "@type": "WebSite",
       "name": "DineWipes — Single Wet Wipes Hyderabad",
       "url": "https://dinewipes.in"
+    },
+    {
+      "@type": "Product",
+      "name": "DineWipes Single-Use Wet Wipes",
+      "description": "Individually sealed, alcohol-free wet wipes for restaurants, cafes and hotels. Standard DineWipes-branded packs at fixed pricing, or custom logo branding priced by quantity.",
+      "brand": { "@type": "Brand", "name": "DineWipes" },
+      "offers": {
+        "@type": "Offer",
+        "name": "Standard DineWipes-branded pack",
+        "price": "1.95",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://dinewipes.in",
+        "areaServed": "IN"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are DineWipes safe and hygienic for restaurants in Hyderabad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every DineWipe is individually sealed and manufactured under strict hygiene protocols, so each wipe stays contaminant-free until your guest opens it — trusted by restaurants and cafes across Hyderabad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a minimum order quantity for wet wipes in Hyderabad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No minimum order on standard DineWipes-branded packs — order any quantity for your Hyderabad restaurant, cafe, or hotel. Custom logo-branded wipes require a minimum order."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast do wet wipes deliver in Hyderabad and across India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard packs ship within 48 hours anywhere in India, including same-city Hyderabad delivery. Custom branded orders take 2-3 weeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the price of wet wipes for restaurants in Hyderabad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard DineWipes-branded packs are ₹1.95 per wipe. Custom logo-branded pricing depends on order quantity and design — contact us for a quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get custom branded wet wipes with my restaurant's logo in Hyderabad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Custom branded wipes carry your logo and design on the packet, made for Hyderabad restaurants, cafes, and hotels, with a minimum order quantity and 2-3 week turnaround. Pricing depends on quantity — contact us for a quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are DineWipes alcohol-free and safe for daily use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all DineWipes are alcohol-free, making them safe for regular use on hands and skin without dryness or irritation — ideal for hospitality use across Hyderabad and India."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are DineWipes different from regular paper napkins or tissues?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DineWipes are pre-moistened, individually sealed wet wipes built for actual hand-cleaning — not just wiping — giving guests in Hyderabad restaurants a real hygiene moment napkins can't."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which businesses in Hyderabad use DineWipes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Restaurants, cafes, cloud kitchens, and hotels across Hyderabad — from Gachibowli to the rest of the city — use DineWipes wherever guests eat with their hands and expect a clean, branded touchpoint."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I order wet wipes for my restaurant in Hyderabad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Order directly on WhatsApp or email hello@dinewipes.in — no account or portal needed, quotes turned around fast for Hyderabad and pan-India orders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you supply wet wipes outside Hyderabad, across India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, DineWipes ships pan-India from our Hyderabad base, with standard packs reaching any Indian city within 48 hours."
+          }
+        }
+      ]
     }
   ]
 }
 </script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FAFAFA'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%230A0A0A'/%3E%3C/svg%3E">
+<link rel="llms" href="/llms.txt">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -968,6 +1069,77 @@ a[aria-disabled="true"] {
 }
 
 /* =============================================
+   FAQ
+   ============================================= */
+.faq {
+  background: var(--bg);
+  padding: 160px 0;
+  border-top: 1px solid var(--border);
+}
+.faq-eyebrow {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.faq-eyebrow::before {
+  content: '';
+  display: block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--mint);
+  flex-shrink: 0;
+}
+.faq-h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.5vw, 48px);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.26;
+  max-width: 640px;
+}
+.faq-list {
+  max-width: 820px;
+}
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0;
+}
+.faq-item summary {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 20px;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-answer {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-top: 16px;
+  max-width: 640px;
+}
+
+/* =============================================
    CUSTOM BRANDING
    ============================================= */
 .custom-section {
@@ -1573,12 +1745,36 @@ a[aria-disabled="true"] {
 }
 .mob-bar-btn.primary:hover { background: #333333; border-color: #333333; }
 @keyframes custom-ring {
-  0%   { box-shadow: 0 0 0 0 rgba(0,0,0,0.28); border-color: rgba(0,0,0,0.60); }
-  70%  { box-shadow: 0 0 0 7px rgba(0,0,0,0); border-color: rgba(0,0,0,0.20); }
+  0%   { box-shadow: 0 0 0 0 rgba(0,0,0,0.35); border-color: var(--text); }
+  70%  { box-shadow: 0 0 0 10px rgba(0,0,0,0); border-color: rgba(0,0,0,0.20); }
   100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); border-color: rgba(0,0,0,0.20); }
 }
-#mob-custom-cta { animation: custom-ring 2s ease-out infinite; }
+@keyframes badge-pop {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+#mob-custom-cta {
+  position: relative;
+  animation: custom-ring 1.8s ease-out infinite;
+  font-weight: 700;
+  border-width: 1.5px;
+}
 #mob-custom-cta:hover { animation: none; background: var(--hover); }
+#mob-custom-cta::before {
+  content: 'POPULAR';
+  position: absolute;
+  top: -10px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: var(--bg);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 2px 6px;
+  border-radius: 2px;
+  white-space: nowrap;
+  animation: badge-pop 1.8s ease-out infinite;
+}
 @media (max-width: 960px) {
   .mob-bar { display: flex; padding-bottom: max(12px, env(safe-area-inset-bottom)); }
   .wa-fixed { display: none !important; }
@@ -1965,6 +2161,58 @@ a[aria-disabled="true"] {
           </a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="faq-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="faq-eyebrow">FAQ</div>
+      <h2 id="faq-heading" class="faq-h2">Questions restaurants in Hyderabad ask us.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>Are DineWipes safe and hygienic for restaurants in Hyderabad?</summary>
+        <p class="faq-answer">Yes. Every DineWipe is individually sealed and manufactured under strict hygiene protocols, so each wipe stays contaminant-free until your guest opens it — trusted by restaurants and cafes across Hyderabad.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is there a minimum order quantity for wet wipes in Hyderabad?</summary>
+        <p class="faq-answer">No minimum order on standard DineWipes-branded packs — order any quantity for your Hyderabad restaurant, cafe, or hotel. Custom logo-branded wipes require a minimum order of 10,000 units.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How fast do wet wipes deliver in Hyderabad and across India?</summary>
+        <p class="faq-answer">Standard packs ship within 48 hours anywhere in India, including same-city Hyderabad delivery. Custom branded orders take 2-3 weeks.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is the price of wet wipes for restaurants in Hyderabad?</summary>
+        <p class="faq-answer">Standard DineWipes-branded packs are ₹1.95 per wipe. Custom logo-branded pricing depends on order quantity and design — contact us for a quote.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I get custom branded wet wipes with my restaurant's logo in Hyderabad?</summary>
+        <p class="faq-answer">Yes. Custom branded wipes carry your logo and design on the packet, made for Hyderabad restaurants, cafes, and hotels, with a minimum order of 10,000 units and 2-3 week turnaround. Pricing depends on quantity — contact us for a quote.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Are DineWipes alcohol-free and safe for daily use?</summary>
+        <p class="faq-answer">Yes, all DineWipes are alcohol-free, making them safe for regular use on hands and skin without dryness or irritation — ideal for hospitality use across Hyderabad and India.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How are DineWipes different from regular paper napkins or tissues?</summary>
+        <p class="faq-answer">DineWipes are pre-moistened, individually sealed wet wipes built for actual hand-cleaning — not just wiping — giving guests in Hyderabad restaurants a real hygiene moment napkins can't.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Which businesses in Hyderabad use DineWipes?</summary>
+        <p class="faq-answer">Restaurants, cafes, cloud kitchens, and hotels across Hyderabad — from Gachibowli to the rest of the city — use DineWipes wherever guests eat with their hands and expect a clean, branded touchpoint.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I order wet wipes for my restaurant in Hyderabad?</summary>
+        <p class="faq-answer">Order directly on WhatsApp or email hello@dinewipes.in — no account or portal needed, quotes turned around fast for Hyderabad and pan-India orders.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you supply wet wipes outside Hyderabad, across India?</summary>
+        <p class="faq-answer">Yes, DineWipes ships pan-India from our Hyderabad base, with standard packs reaching any Indian city within 48 hours.</p>
+      </details>
     </div>
   </div>
 </section>
