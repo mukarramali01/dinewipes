@@ -40,8 +40,9 @@
   "@graph": [
     {
       "@type": "Product",
-      "name": "DineWipes Standard Branded Pack",
+      "name": "DineWipes — Single Wet Wipe",
       "description": "Standard DineWipes-branded individually sealed, alcohol-free wet wipes. No minimum order quantity, ships in 48 hours across India.",
+      "image": "https://dinewipes.in/brand-slide-1.webp",
       "brand": { "@type": "Brand", "name": "DineWipes" },
       "offers": {
         "@type": "Offer",
@@ -110,6 +111,7 @@ nav {
   padding: 7px 16px; color: var(--muted); background: none;
   border: none; cursor: pointer; font-family: var(--sans);
   transition: background 0.15s, color 0.15s;
+  text-decoration: none; display: inline-block;
 }
 .nav-type-btn:hover { color: var(--text); background: var(--hover); }
 .nav-type-btn.active { background: var(--accent); color: var(--bg); }
@@ -219,6 +221,10 @@ nav {
 }
 .stepper-input::-webkit-outer-spin-button,
 .stepper-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
 .stepper-unit { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
 .price-calc { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
 .price-calc strong { color: var(--text); font-weight: 500; }
@@ -360,8 +366,8 @@ nav {
     <div class="nav-right">
       <a class="nav-back" href="custom.html">Custom Branded</a>
       <div class="nav-type-toggle">
-        <button class="nav-type-btn active" onclick="location.href='brand.html'">DineWipes Branded</button>
-        <button class="nav-type-btn" onclick="location.href='custom.html'">Custom Branded</button>
+        <a class="nav-type-btn active" href="brand.html">DineWipes Branded</a>
+        <a class="nav-type-btn" href="custom.html">Custom Branded</a>
       </div>
       <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -375,7 +381,7 @@ nav {
   <a href="custom.html">Custom Branded</a>
 </div>
 
-<div class="product-page">
+<main class="product-page">
 
   <div class="img-panel">
     <div class="carousel">
@@ -413,6 +419,7 @@ nav {
     <div class="order-label">Quantity</div>
     <div class="stepper">
       <button class="stepper-btn" id="qty-minus" type="button">−</button>
+      <label for="qty-input" class="sr-only">Quantity</label>
       <input class="stepper-input" id="qty-input" type="number" value="5000" min="1" step="500">
       <button class="stepper-btn" id="qty-plus" type="button">+</button>
     </div>
@@ -429,11 +436,12 @@ nav {
     </div>
   </div>
 
-</div>
+</main>
 
 <div class="mob-bar">
   <div class="mob-stepper">
     <button class="mob-stepper-btn" id="mob-qty-minus" type="button">−</button>
+    <label for="mob-qty-input" class="sr-only">Quantity</label>
     <input class="mob-stepper-input" id="mob-qty-input" type="number" value="5000" min="1" step="500">
     <button class="mob-stepper-btn" id="mob-qty-plus" type="button">+</button>
   </div>
