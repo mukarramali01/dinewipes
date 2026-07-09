@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DY92E0PLP"></script>
+<!-- Google tag (gtag.js) + PostHog: deferred until after load to keep initial render fast -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-9DY92E0PLP');
 </script>
-<!-- PostHog -->
 <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="xi Si init Ni ji pr qi Ui $i capture calculateEventProperties Zi register register_once register_for_session unregister unregister_for_session Yi getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Ki identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Qi Wi createPersonProfile setInternalOrTestUser Ji Fi tn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing zi debug mr it getPageViewId captureTraceFeedback captureTraceMetric Ri".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    posthog.init('phc_xPQrAYFARRuvNuPRWE9ini8Ty5NVWGZDiyaJvJqMaTJj', {
-        api_host: 'https://us.i.posthog.com',
-        defaults: '2026-05-30',
-        person_profiles: 'identified_only',
-    })
+</script>
+<script>
+window.addEventListener('load', function () {
+  var gtmScript = document.createElement('script');
+  gtmScript.async = true;
+  gtmScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-9DY92E0PLP';
+  document.head.appendChild(gtmScript);
+
+  posthog.init('phc_xPQrAYFARRuvNuPRWE9ini8Ty5NVWGZDiyaJvJqMaTJj', {
+      api_host: 'https://us.i.posthog.com',
+      defaults: '2026-05-30',
+      person_profiles: 'identified_only',
+  });
+});
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -1498,7 +1505,7 @@ a[aria-disabled="true"] {
   max-width: 280px;
   margin-top: 16px;
 }
-.footer-col h4 {
+.footer-col h3 {
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -1789,7 +1796,7 @@ a[aria-disabled="true"] {
 <nav class="nav" aria-label="Primary navigation">
   <div class="nav-inner">
     <a href="#" aria-label="DineWipes home">
-      <img src="logo-white.webp" alt="DineWipes" height="36" style="display:block;height:36px;width:auto;filter:brightness(0);">
+      <img src="logo-white.webp" alt="DineWipes" width="144" height="36" style="display:block;height:36px;width:auto;filter:brightness(0);">
     </a>
     <ul class="nav-links">
       <li><a href="#why">Why DineWipes</a></li>
@@ -1810,6 +1817,7 @@ a[aria-disabled="true"] {
   <a href="#usecases" class="mnav-link">Who It's For</a>
 </div>
 
+<main>
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero-inner">
@@ -2119,7 +2127,7 @@ a[aria-disabled="true"] {
         </a>
       </div>
       <div class="custom-visual">
-        <img src="custom--wetwipes.webp" alt="Custom branded DineWipe packet with your restaurant logo" loading="lazy">
+        <img src="custom--wetwipes.webp" alt="Custom branded DineWipe packet with your restaurant logo" width="1080" height="1350" loading="lazy">
       </div>
     </div>
   </div>
@@ -2217,23 +2225,24 @@ a[aria-disabled="true"] {
     </div>
   </div>
 </section>
+</main>
 
 <!-- FOOTER -->
 <footer class="footer" id="contact">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="logo-white.webp" alt="DineWipes" height="44" style="display:block;height:44px;width:auto;margin-bottom:16px;filter:brightness(0);">
+      <img src="logo-white.webp" alt="DineWipes" width="176" height="44" style="display:block;height:44px;width:auto;margin-bottom:16px;filter:brightness(0);">
       <p class="footer-tagline">Clean hands before the first bite. Every time.</p>
     </div>
     <div class="footer-col">
-      <h4>Get in Touch</h4>
+      <h3>Get in Touch</h3>
       <a id="footer-wa" href="#" target="_blank" rel="noopener">WhatsApp: +91 85550 08016</a>
       <a href="mailto:hello@dinewipes.in">hello@dinewipes.in</a>
       <p>Gachibowli, Hyderabad</p>
       <p>Based in Hyderabad · shipping across India</p>
     </div>
     <div class="footer-col">
-      <h4>Explore</h4>
+      <h3>Explore</h3>
       <a href="#quote">Order Your Wipe</a>
       <a href="#usecases">Who It's For</a>
       <a href="#custom-branding">Custom Branding</a>
